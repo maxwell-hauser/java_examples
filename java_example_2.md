@@ -1,3 +1,13 @@
+# Java Example 2: Memory, Graphics, and Coordinate Systems
+
+[← Back to README](./README.md)
+
+---
+
+## Object Memory Layout
+
+### Rectangle Class
+
 Consider the following class definition:
 ```java
 public class Rectangle
@@ -22,6 +32,8 @@ Rectangle t = new Rectangle("Table Top", 100, 100, 300, 200);
 | width       | double | 8             | 300     |
 | height      | double | 8             | 200     |
 ---
+
+### Polygon Class
 
 Below is the structure (sequence and number of bytes for each data member) of object $p$ created using:
 
@@ -64,6 +76,11 @@ Polygon p = new Polygon();
 | x           | int[]| 24            | [0,0,0,0,0,0] |
 | y           | int[]| 24            | [0,0,0,0,0,0] |
 ---
+
+## AWT/Swing Graphics Examples
+
+### Drawing Shapes with Border Spacing
+
 Below is a paint method that draws a shape in the middle of the screen. It leaves 20 pixels from the borders and assumes that the title bar is 80 pixels high.
 
 ```java
@@ -114,6 +131,9 @@ public void paint(Graphics g) {
 }
 ```
 ---
+
+### Responsive Grid Drawing
+
 Below is a paint method that draws a grid based on the current width and height of the visible frame. It leaves 20 pixels space around the border.
 
 ```java
@@ -133,6 +153,9 @@ public void paint(Graphics g) {
 }
 ```
 ---
+
+### Concentric Circles
+
 Below is a paint method that draws concentric circles separated by 20 pixels based on the current width and height of the visible screen. It leaves 20 pixels on the borders of visible window and considers the relationship between width and height of window.
 
 ```java

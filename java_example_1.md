@@ -1,3 +1,11 @@
+# Java Example 1: Math, Arrays, and Algorithms
+
+[← Back to README](./README.md)
+
+---
+
+## Integer Square Root
+
 Below is a method that, given an integer, $n$, returns the largest integer, $k$, where $k^2 \leq n$.
 
 ```java
@@ -10,7 +18,10 @@ public static int integerK(int n) {
     return k;
 }
 ```
+
 ---
+
+## Pi Approximation (Leibniz Series)
 
 You can approximate $π$ by using the following series:
 
@@ -31,7 +42,11 @@ public static double piApprox(int j) {
     return 4*pi;
 }
 ```
+
 ---
+
+## Standard Deviation
+
 Below is a method, $standardDeviation$, that, given an array of fractional numbers, returns the standard deviation of the numbers using the following formula.
 
 Where $μ$ is the average of the array:
@@ -53,7 +68,11 @@ public static double standardDeviation(double[] s) {
     return standardDeviation;
 }
 ```
+
 ---
+
+## Array Reversal (Recursive)
+
 Below is a method, $reverseArray1$, that, given an array of integers, returns a second array of integers containing the elements of the input argument in reverse order.
 
 ```java
@@ -77,7 +96,11 @@ public static int[] reverseArray1(int[] s) {
     return s;
 }
 ```
+
 ---
+
+## Array Reversal (Iterative)
+
 Below is a variation of method $reverseArray1$, $reverseArray2$, that, given an array of integers, returns a second array of integers containing the elements of the input argument in reverse order.
 
 ```java
@@ -89,7 +112,11 @@ public static int[] reverseArray2(int[] s0) {
     return s1;
 }
 ```
+
 ---
+
+## 2D Array Addition (Matrix Sum)
+
 Below is a method, $addArray$, that, given two 2D arrays, $a$ and $b$, returns the sum of the two arrays, $c$, where:
 $c_{ij} = a_{ij} + b_{ij}$.
 

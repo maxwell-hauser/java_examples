@@ -1,3 +1,13 @@
+# Java Example 3: OOP, Inheritance, and UML
+
+[← Back to README](./README.md)
+
+---
+
+## GeometricObject Hierarchy
+
+### Base Class: GeometricObject
+
 Consider the below inheritance hierarchy that exhibits the following behaviors:
 1. The default color of the created object is "white."
 2. The default filled status is false.
@@ -59,9 +69,12 @@ public class GeometricObject {
     }
 }
 ```
+
+### Subclasses
+
 Classes Circle, Rectangle and Triangle inherit from GeometricObject.
 
-Circle:
+#### Circle
 ```java
 public class Circle extends GeometricObject {
     private double radius;
@@ -96,7 +109,8 @@ public class Circle extends GeometricObject {
     }
 }
 ```
-Rectangle:
+
+#### Rectangle
 ```java
 public class Rectangle extends GeometricObject {
     private double width;
@@ -143,7 +157,8 @@ public class Rectangle extends GeometricObject {
     }
 }
 ```
-Triangle:
+
+#### Triangle
 ```java
 public class Triangle extends GeometricObject {
     private double x1;
@@ -241,7 +256,13 @@ public class Triangle extends GeometricObject {
     }
 }
 ```
+
 ---
+
+## UML Diagrams
+
+### Point and Polygon Classes
+
 UML diagram for classes Point and Polygon:
 ```
 -------------------------------
@@ -285,11 +306,16 @@ Polygon
 +toString(): String
 -------------------------------
 ```
-What is the purpose of defining a superclass?
+
+---
+
+## OOP Concepts Q&A
+
+### What is the purpose of defining a superclass?
 
 A superclass is defined to encapsulate common attributes and behaviors that can be shared among multiple subclasses. It promotes code reusability, establishes a hierarchical relationship, and allows for polymorphism, enabling objects of different subclasses to be treated as objects of the superclass type.
 
-How do you define a subclass of class X?
+### How do you define a subclass of class X?
 
 By using “extends” keyword.
 
@@ -301,7 +327,7 @@ public class Subclass extends Superclass
 ```
 Subclass is a subclass of Superclass.
 
-How do you explicitly invoke a superclass constructor?
+### How do you explicitly invoke a superclass constructor?
 
 By using “super” keyword.
 
@@ -324,18 +350,20 @@ public class Student extends Person
     }
 }
 ```
+
 ---
-What is method overloading?
+
+### What is method overloading?
 
 When two or more methods in the same class have the same name but different parameters (different type, number, or both). It allows methods to perform similar functions with different types or numbers of inputs.
 
-What is method overriding?
+### What is method overriding?
 
 When you create a specific implementation of a method that is already provided by its superclass, parent class, or default libraries.
 
 You could implement your own toString() and it will override the predefined toString() method provided by the java libraries.
 
-What is a package?
+### What is a package?
 
 A package is a namespace that organizes a set of related classes and interfaces. It helps to avoid name conflicts, control access, and manage the organization of classes in large projects.
 
@@ -367,7 +395,10 @@ Is `d` accessible from classes outside package `p1`?
 Yes and no, since `d` is a protected variable, it is accessible by the package it is within and by the subclass(es) that inherit(s) `Z`.
 
 ---
-Access specifiers summary:
+
+## Access Modifiers Reference
+
+### Access Specifiers Summary
 | Access Specifier | Within Class | Within Package | Subclass (same package) | Subclass (different package) | Outside Package |
 |------------------|--------------|----------------|------------------------|------------------------------|-----------------|
 | private          | Yes          | No             | No                     | No                           | No              |
@@ -375,6 +406,9 @@ Access specifiers summary:
 | protected        | Yes          | Yes            | Yes                    | Yes                          | No              |
 | public           | Yes          | Yes            | Yes                    | Yes                          | Yes             |  
 ---
+
+## Case Study: University Class Hierarchy
+
 Below is a class hierarchy for university members that includes:
 
 Students (part-time and full-time)
